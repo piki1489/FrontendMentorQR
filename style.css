@@ -20,6 +20,7 @@ body {
 .hero h1 {
     font-weight: 700;
     font-size: 3.2rem;
+    margin-bottom: 15px;
 }
 
 .card {
@@ -74,6 +75,32 @@ body {
     background-color: #88704f;
     border: 1px solid #86683d;
 }
+
+.code-loader {
+    color: #886c46;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: 700;
+    font-size: 3.2rem;
+    opacity: 0.8;
+}
+
+.code-loader span {
+    display: inline-block;
+    animation: pulse_414 0.4s alternate infinite ease-in-out;
+}
+
+.code-loader span:nth-child(odd) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse_414 {
+    to {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+
+
 
 @media (max-width:900px) {
     .container {
