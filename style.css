@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Outfit:wght@400;700&display=swap');
 
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #b3936529;
+}
 
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(212, 45%, 89%);
+    flex-direction: row;
     min-height: 100vh;
+}
+
+.hero {
+    width: 36rem;
+}
+
+.hero h1 {
+    font-weight: 700;
+    font-size: 3.2rem;
 }
 
 .card {
@@ -33,7 +46,6 @@
 }
 
 .text h2 {
-    font-family: 'Outfit', sans-serif;
     font-weight: 700;
     font-size: 20px;
     padding-bottom: 15px;
@@ -41,9 +53,46 @@
 }
 
 .text p {
-    font-family: 'Outfit', sans-serif;
     font-weight: 400;
     font-size: 13px;
     color: hsla(219, 15%, 55%, 0.752);
     margin-bottom: 20px;
+}
+
+.create {
+    background-color: #b7986d;
+    border: 1px solid #886c46;
+    border-radius: 10px;
+    color: white;
+    padding: 17px;
+    font-size: 1.2rem;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.create:hover {
+    background-color: #88704f;
+    border: 1px solid #86683d;
+}
+
+@media (max-width:900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .hero {
+        width: 90%;
+        margin-left: 15rem;
+        margin-right: 15rem;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    .hero p {
+        line-height: 1.2rem;
+    }
+
+    .hero h1 {
+        margin-bottom: 1.2rem;
+    }
 }
