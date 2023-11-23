@@ -1,37 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Códigos QR</title>
     <link rel="icon" type="image/jpg" href="./images/favicon-32x32.png" />
-    <link rel="stylesheet" href="./style.css">
-    <link rel="stylesheet" href="./reset.css">
-</head>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./reset.css" />
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  </head>
 
-<body>
-
+  <body>
     <div class="container">
-        <div class="hero">
-            <h1>Crea un <div class="code-loader"><span>{</span>codigo QR<span>}</span>
-                </div> para tu restaurante</h1>
-            <p>QR Code Generator es una aplicación de generación de códigos QR para los hosteleros que tienen un restaurante.
-                Permite que tus clientes conozcan tu menú con una simple imágen y obtén estadísticas de apertura y opciones más vistas.</p>
-            <button class="create">Crea tu código QR ahora</button>
+      <div class="hero">
+        <h1>
+          Crea un
+          <div class="code-loader"><span>{</span>codigo QR<span>}</span></div>
+          para tu restaurante
+        </h1>
+        <p>
+          QR Code Generator es una aplicación de generación de códigos QR para
+          los hosteleros que tienen un restaurante. Permite que tus clientes
+          conozcan tu menú con una simple imagen y obtén estadísticas de
+          apertura y opciones más vistas.
+        </p>
+        <button class="create" onclick="openModal()">
+          Crea tu código QR ahora
+        </button>
+      </div>
+      <div class="card">
+        <div class="codigo" id="qr-code">
+          <!-- Aquí es donde se mostrará el código QR -->
         </div>
-        <div class="card">
-            <div class="codigo">
-
-            </div>
-            <div class="text">
-                <h2>Promocionar su negocio y <br> conectarlo con sus clientes.</h2>
-                <p>Scan the QR code to visist Frontend <br> Mentor and take your coding skills to <br> the next level</p>
-            </div>
+        <div class="text">
+          <h2>
+            Promocionar su negocio y <br />
+            conectarlo con sus clientes.
+          </h2>
+          <p>
+            Scan the QR code to visit Frontend <br />
+            Mentor and take your coding skills to <br />
+            the next level
+          </p>
         </div>
+      </div>
     </div>
 
-</body>
+    <div id="qr-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <label for="url-input">Ingresa tu URL:</label>
+        <input type="text" id="url-input" placeholder="https://ejemplo.com" />
+        <button onclick="generateQRCode()">Generar código QR</button>
+      </div>
+    </div>
 
+    <script src="main.js"></script>
+  </body>
 </html>

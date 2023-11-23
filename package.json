@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "qrcode-generator": "^1.4.4"
+  },
+  "name": "frontendmentorqr",
+  "version": "1.0.0",
+  "description": "Mi proyecto con códigos QR",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "QR",
+    "código",
+    "proyecto"
+  ],
+  "author": "Raimon",
+  "license": "MIT"
+}
